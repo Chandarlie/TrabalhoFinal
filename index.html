@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cotação plano de saúde</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <main class="container-fluid" id="container">
+
+        <div class="row" id="imagem">
+            <img src="/image/Captura_de_tela_2023-11-21_201724-removebg-preview.png" alt="Logo">
+        </div>
+
+        <div class="row">
+            <div id="calculadora" class="col">
+                <form id="form">
+                    <h1 id="titulo">
+                        Verifique aqui o melhor plano de saúde
+                    </h1>
+
+                    <div class="input-peso">
+                        <label for="idade">
+                            Idade
+                        </label>
+                        <div class="input-fild">
+                            <input type="number" id="idade" required>
+                            <span>
+                                anos
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-altura">
+                        <label for="peso">
+                            Peso
+                        </label>
+                        <div class="input-fild">
+                            <input type="number" id="peso" step="0.001" required>
+                            <span>
+                                Kg
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-idade">
+                        <label for="altura">Altura</label>
+                        <div class="input-fild">
+                            <input type="number" id="altura" name="altura" min="0" max="3" step="0.01" required>
+                            <span>
+                                m
+                            </span>
+                        </div>
+                    </div>
+
+                    <label for=""></label>
+
+                    <button type="submit" id="calcular">
+                        Calcular
+                    </button>
+
+                </form>
+
+            </div>
+            <div id="resultado" class="hidden">
+                <h2>Resultado</h2>
+                <p>Valor do IMC: <span id="calcularIMC" class="hidden"></span></p>
+
+                <p>O convenio mais vantajoso para você é: <span id="plano" class="hidden"></span></p>
+            </div>
+
+        </div>
+
+        <div class="row" , id="tabela">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="background-color: #193272;  color: aliceblue;">Convenio A</th>
+                        <th style="background-color: #193272;"></th>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #08b2cc;">Plano</th>
+                        <th style="background-color: #08b2cc">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plano Básico</td>
+                        <td id="a-basico"></td>
+                    </tr>
+                    <tr>
+                        <td>Plano Standard</td>
+                        <td id="a-standard"></td>
+                    </tr>
+                    <tr>
+                        <td>Plano Premium</td>
+                        <td id="a-premium"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="background-color: #193272;  color: aliceblue;">Convenio B</th>
+                        <th style="background-color: #193272;"></th>
+                    </tr>
+                    <tr>
+                        <th style="background-color: #08b2cc;">Plano</th>
+                        <th style="background-color: #08b2cc">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Plano Básico</td>
+                        <td id="b-basico"></td>
+                    </tr>
+                    <tr>
+                        <td>Plano Standard</td>
+                        <td id="b-standard"></td>
+                    </tr>
+                    <tr>
+                        <td>Plano Premium</td>
+                        <td id="b-premium"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
